@@ -53,5 +53,20 @@ To switch between passive(muted) and active(unmutted), the Plunder Bug mute scri
 
 1. Go to `ncpa.cpl` via Windows + R
 2. Click Plunder Bug interface and then select Properties
-3. Uncheck the boxes next to each of the protocols 
+3. Uncheck the boxes next to each of the protocols
+
+#### Macos Mode Switching 
+
+##### Using Plunder Bug.sh
+
+1. Download the plunderbug.sh for *nix platforms from [Hak5 Download Center](https://downloads.hak5.org/bug)
+2. Open a termnal, access the directory of the downloaded script, make it executbale with `chmod +x ./plunderbug.sh` and run it as root
+3. It should then accept the arguments -mute and -unmute to switch between passive and active mode.
+
+##### Maunally 
+
+1. Go to Networks from System Prefreences on your computer
+2. Click advanced, then select off from the configure IPv4 and IPv6 menus
+
+#### Linux Mode Swithing 
 
