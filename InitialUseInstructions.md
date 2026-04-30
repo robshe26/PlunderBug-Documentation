@@ -15,7 +15,7 @@ ___It should appear similar to this:___
 
 3. Using two Ethernet cables, plug the Plunder Bug inline between any two devices.
    - The packets between the two ports will be mirrored on the USB-C tap port, in my case listed as Ethernet 6.
-      - These may be viwed using common open source packet analyzers.
+      - These may be viewed using common open source packet analyzers.
 
 ___This is an example packet capture between two PCs pinging each other:___
 <img width="2877" height="1702" alt="Screenshot 2026-04-15 211007" src="https://github.com/user-attachments/assets/6cc6536b-80aa-4626-8b28-cf8e8296e67a" />
@@ -27,15 +27,15 @@ If this is the case there are steps to take to make it visible
 
 1. Make sure you are running WireShark as Administrator
 2. Make sure that Npcap is installed with Wireshark with the "Install Npcap in WinPcap API-compatible Mode" box checked
-3. In Wireshark, click capture thne select refresh interfaces
+3. In Wireshark, click capture then select refresh interfaces
 ___
 ## Mode Switching
 
-The Plunder Bug can be used in a bidirectional manner, meaning that in addtion to recieveing a mirror of the traffic, it can aslo act as an addtional Ethernet Port on the target LAN. 
+The Plunder Bug can be used in a bidirectional manner, meaning that in addition to receiving a mirror of the traffic, it can also act as an additional Ethernet Port on the target LAN. 
 
-### Operating System Specifc
+### Operating System Specific
 
-To switch between passive(muted) and active(unmutted), the Plunder Bug mute script must be completed specific to your machine. 
+To switch between passive(muted) and active(unmuted), the Plunder Bug mute script must be completed specific to your machine. 
 
 #### Windows Mode Switching
 
@@ -45,8 +45,8 @@ To switch between passive(muted) and active(unmutted), the Plunder Bug mute scri
 
 2. Open Powershell using `powershell -exec bypass` with Windows + R
 
-3. Change to the directory of the downloaded script and executre with the numte or unmute parameter (ex: `.\plunderbug.ps1 mute`)
-   - Click through the following promts 
+3. Change to the directory of the downloaded script and execute with the mute or unmute parameter (ex: `.\plunderbug.ps1 mute`)
+   - Click through the following prompts 
    - This setting will stay in effect until the script is run again with the opposite direction
 
 ##### Manually 
@@ -55,18 +55,31 @@ To switch between passive(muted) and active(unmutted), the Plunder Bug mute scri
 2. Click Plunder Bug interface and then select Properties
 3. Uncheck the boxes next to each of the protocols
 
-#### Macos Mode Switching 
+#### macOS Mode Switching 
 
-##### Using Plunder Bug.sh
+##### Using Plunderbug.sh
 
 1. Download the plunderbug.sh for *nix platforms from [Hak5 Download Center](https://downloads.hak5.org/bug)
-2. Open a termnal, access the directory of the downloaded script, make it executbale with `chmod +x ./plunderbug.sh` and run it as root
+2. Open a terminal, access the directory of the downloaded script, make it executable with `chmod +x ./plunderbug.sh` and run it as root
 3. It should then accept the arguments -mute and -unmute to switch between passive and active mode.
 
-##### Maunally 
+##### Manually 
 
-1. Go to Networks from System Prefreences on your computer
+1. Go to Networks from System Preferences on your computer
 2. Click advanced, then select off from the configure IPv4 and IPv6 menus
 
-#### Linux Mode Swithing 
+#### Linux Mode Switching 
+
+##### Using Plunderbug.sh
+
+1. Download the plunderbug.sh for *nix platforms from [Hak5 Download Center](https://downloads.hak5.org/bug)
+2. Open a termnal, access the directory of the downloaded script, make it executable with `chmod +x ./plunderbug.sh` and run it as root
+3. It should then accept the arguments -mute and -unmute to switch between passive and active mode.
+
+##### Manually 
+
+1. Open Network Manager and click the configure gear next to the Plunder Bug interface
+2. Disable the option from IPv4 and IPv6 tabs 
+
+
 
