@@ -1,4 +1,0 @@
-New Network Interface: When connected, the Plunder Bug often appears on the victim's computer as a new network interface, specifically the ASIX AX88772C USB Ethernet adapter.
-Check Device Manager/System Information: On Windows, check for this ASIX device in the Device Manager. On Linux/Mac, run ifconfig or ip a to look for unexpected USB Ethernet interfaces.
-Network Traffic Analysis: Using Wireshark or similar tools to analyze traffic can reveal unexpected tapping, particularly if the device is in its default "unmuted" (active) mode.
-Hardware Inspection/Security Tools: Advanced, specialized security solutions (like those from Sepio) can detect the presence of malicious hardware on a network port, even if the device doesn't have an IP address, by identifying it as a hidden USB device on the Ethernet line
